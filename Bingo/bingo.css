@@ -1,0 +1,804 @@
+/* Base Page Stuff */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Minecraftia;
+}
+
+button:focus, input:focus {
+	outline:0;
+}
+
+@font-face {
+	font-family: minecraftFont;
+	src: url(MinecrafterAlt.ttf);
+}
+
+@font-face {
+	font-family: Minecraftia;
+	src: url(Minecraftia.ttf);
+}
+
+/* Colour theme */
+:root {
+	--bg-colour: #FFF;
+	--fg-colour: #000;
+
+	--nav-shadow-colour: #575757;
+
+	--bingo-bg-colour: #EBEBEB;
+	--bingo-border-colour: #FFF;
+	--square-border-colour: #EBEBEB;
+
+	--grey-square: #C6C6C6;
+	--grey-square-hover: #EBEBEB;
+	--blue-square: #9AE8FF;
+	--blue-square-hover: #57D9FF;
+	--green-square: #CAFF70;
+	--green-square-hover: #A2CD5A;
+	--red-square: #FE6A50;
+	--red-square-hover: #CD5B45;
+	--yellow-square: #F2F210;
+	--yellow-square-hover: #D9D90B;
+	--cyan-square: #00D69B;
+	--cyan-square-hover: #00AD82;
+	--brown-square: #D5AE85;
+	--brown-square-hover: #D0955F;
+}
+
+.dark {
+	--bg-colour: #141414;
+	--fg-colour: #EFEFEF;
+
+	--nav-shadow-colour: #202020;
+
+	--bingo-bg-colour: #141414;
+	--bingo-border-colour: #202020;
+	--square-border-colour: #202020;
+
+	--grey-square: #141414;
+	--grey-square-hover: #303030;
+	--blue-square: #00566A;
+	--blue-square-hover: #00A0C4;
+	--green-square: #50833C;
+	--green-square-hover: #75BF4D;
+	--red-square: #851515;
+	--red-square-hover: #C53423;
+	--yellow-square: #808000;
+	--yellow-square-hover: #C0C038;
+	--cyan-square: #004C2F;
+	--cyan-square-hover: #309560;
+	--brown-square: #563916;
+	--brown-square-hover: #7F542F;
+}
+
+/** backgrounds **/
+body {
+	background-color: var(--bg-colour);
+	background-size: 1920px 1080px;
+}
+body {
+	min-height: 100%;
+}
+.bg1 {
+	background-image: url(Backgrounds/background1.jpg);
+}
+.bg2 {
+	background-image: url(Backgrounds/background2.jpg);
+}
+.bg3 {
+	background-image: url(Backgrounds/background3.jpg);
+}
+.bg4 {
+	background-image: url(Backgrounds/background4.jpg);
+}
+.bg5 {
+	background-image: url(Backgrounds/background5.jpg);
+}
+.bg6 {
+	background-image: url(Backgrounds/background6.jpg);
+}
+.bg7 {
+	background-image: url(Backgrounds/background7.jpg);
+}
+.bg8 {
+	background-image: url(Backgrounds/background8.jpg);
+}
+.bg9 {
+	background-image: url(Backgrounds/background9.jpg);
+}
+.bg10 {
+	background-image: url(Backgrounds/background10.jpg);
+}
+
+/* End Base Page */
+
+/* Nav Bar */
+
+#nav_section {
+	background-color: var(--bg-colour);
+	width: auto;
+	height: 100px;
+	margin-bottom: 10px;
+	box-shadow: 0px 10px 5px -10px var(--nav-shadow-colour);
+	border-bottom: 5px solid;
+	margin-bottom: 10px;
+}
+
+#nav_section h1 {
+	font-size: 4em;
+	font-family: minecraftFont;
+	color: #A59C99;
+	text-shadow: 0px 7px #000;
+	width: 700px;
+	height: 100%;
+	margin-top: 0px;
+	line-height: 100px;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
+
+/* End Nav Bar */
+
+/* Bingo Card */
+#bingo-section {
+	width: 700px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: var(--bingo-bg-colour);
+	border: 4px solid;
+}
+
+#bingo-box {
+	width: 700px;
+	height: 600px;
+	box-sizing: border-box;
+	border: 4px solid var(--bingo-border-colour);
+	border-radius: 5px;
+	position: relative;
+}
+
+#bingo, #hidden-bingo {
+	height: 100%;
+	width: 100%;
+}
+
+#bingo {
+	border-spacing: 0px;
+	border-collapse: separate;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#bingo td {
+	cursor: pointer;
+	width: 100px;
+	height: 100px;
+	text-align:center;
+	font-size: .75em;
+	border: 2px solid var(--square-border-colour);
+	box-shadow: inset 3px 3px 3px 0px rgba(0,0,0,0.75);
+	color: var(--fg-colour);
+	padding: 5px 5px 5px 7px;
+	position: relative;
+}
+
+/** Card colours **/
+
+.symbol {
+	position: absolute;
+	bottom: 4px;
+	right: 4px;
+	width: 12px;
+	height: 12px;
+	opacity: 0.7;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.dark #bingo td:hover {
+	color: #FFF; /* more contrast on hover in dark mode */
+}
+
+#bingo td.greysquare {
+	background-color: var(--grey-square);
+}
+#bingo td.greysquare:hover {
+	background-color: var(--grey-square-hover);
+}
+
+#bingo tr td.bluesquare {
+	background: var(--blue-square);
+}
+#bingo tr td.bluesquare:hover {
+	background: var(--blue-square-hover);
+}
+.bluesquare .symbol {
+	background-image: url("Symbols/heart.png");
+}
+
+#bingo tr td.greensquare {
+	background: var(--green-square);
+}
+#bingo tr td.greensquare:hover {
+	background: var(--green-square-hover);
+}
+.greensquare .symbol {
+	background-image: url("Symbols/ok.png");
+}
+
+#bingo tr td.redsquare {
+	background: var(--red-square);
+}
+#bingo tr td.redsquare:hover {
+	background: var(--red-square-hover);
+}
+.redsquare .symbol {
+	background-image: url("Symbols/x.png");
+}
+
+#bingo tr td.yellowsquare {
+	background: var(--yellow-square);
+}
+#bingo tr td.yellowsquare:hover {
+	background: var(--yellow-square-hover);
+}
+.yellowsquare .symbol {
+	background-image: url("Symbols/star.png");
+}
+
+#bingo tr td.cyansquare {
+	background: var(--cyan-square);
+}
+#bingo tr td.cyansquare:hover {
+	background: var(--cyan-square-hover);
+}
+.cyansquare .symbol {
+	background-image: url("Symbols/moon.png");
+}
+
+#bingo tr td.brownsquare {
+	background: var(--brown-square);
+}
+#bingo tr td.brownsquare:hover {
+	background: var(--brown-square-hover);
+}
+.brownsquare .symbol {
+	background-image: url("Symbols/apple.png");
+}
+
+/** Goal tooltip **/
+.tooltip {
+	position: absolute;
+	margin: 20px;
+	display: inline-block;
+	border: 2px solid purple;
+	border-radius: 5px;
+	background-color: rgba(0,0,0,.9);
+	text-align: center;
+}
+
+.tooltipQ {
+	opacity: 0.6;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	padding-top: 4px;
+	right: 5px;
+	top: 5px;
+}
+
+#bingo td[data-tooltiptext=""] .tooltipQ {
+	display: none;
+}
+
+.tooltiptext {
+	text-shadow: 2px 2px #000;
+	font-size: 12px;
+	color: #FFF; /* regardless of colour theme */
+	overflow: hidden;
+}
+
+#goalTooltip {
+	padding: 10px;
+	width: 300px;
+}
+
+#goalTooltip img {
+	border: 2px solid var(--bingo-border-colour);
+	margin-right: 5px;
+	width: 64px;
+	height: 64px;
+	float: left;
+	background-color: #C6C6C6; /* regardless of colour theme */
+}
+
+#goalTooltip .tooltiptext {
+	line-height: 1.2em;
+	margin-bottom: 40px;
+	margin-left: 10px;
+	position: relative;
+	top: -5px;
+}
+
+/** Hide Table mode **/
+#hidden-bingo {
+	display: none;
+	background-image: url("stone-tile.png");
+	background-repeat: repeat;
+	background-size: 128px 128px;
+	box-sizing: border-box;
+	padding: 50px;
+}
+
+.hidden #hidden-bingo {
+	display: block;
+}
+.hidden #bingo {
+	display: none;
+}
+
+#hidden-table {
+	background-color: var(--bg-colour);
+	color: var(--fg-colour);
+	border: 2px solid #000;
+	padding: 20px;
+	text-align: center;
+	font-size: 0.75em;
+}
+
+#hidden-table p {
+	margin-top: 10px;
+}
+
+#hidden-table-seed {
+	font-size: 1.5em;
+}
+
+#hidden-table-seed input {
+	font-size: 1em;
+	width: 200px;
+	text-align: center;
+}
+
+#copiedTooltip {
+	margin: 0 10px;
+	padding: 0 5px 5px;
+}
+
+#hidden-table-seed button {
+	margin-top: 10px;
+	width: 200px;
+}
+
+.show-table-button {
+	width: 450px;
+	margin: 20px auto 20px auto;
+}
+
+/** Info bar **/
+#info_bar {
+	padding: 0;
+	margin-top: 10px;
+	text-align:center;
+	color: var(--fg-colour);
+}
+
+.seed_for_copying {
+	font-size: 1.01em;
+	text-align: center;
+}
+
+/* End Bingo Card  */
+
+/* UI controls */
+
+/** Buttons **/
+.buttons-row {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.button {
+	position: relative;
+	background-color: #6F6F6F;
+	background-image: url("button-background.png");
+}
+
+.button,
+.slider-holder,
+.slider {
+	cursor: pointer;
+}
+.button,
+.slider-holder {
+	height: 50px;
+	border: 2px solid #000;
+}
+.button,
+.slider-text {
+	color: #FFF;
+	font-size: 20px;
+	text-align: center;
+	text-shadow: 0.125em 0.125em #3f3f3f;
+}
+.small-button {
+	padding: 2px 6px 3px;
+	height: auto;
+	font-size: 1em;
+}
+
+/*** Button border and insets ***/
+.button::after,
+.button::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	top: 0;
+}
+
+.button::after {
+	border: 3px solid #00000045;
+	border-bottom-width: 4px;
+	border-top: unset;
+	border-left: unset;
+}
+
+.button::before {
+	border: 3px solid #ffffff6e;
+	border-bottom: unset;
+	border-right: unset;
+}
+.dark .button::before {
+	border-color: #AAAAAA6e;
+}
+
+/** Dropdowns **/
+.dropdown-holder  {
+	position: relative;
+}
+
+.dropdown {
+	display: none;
+	position: absolute;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+/** Sliders **/
+.slider-holder {
+	box-sizing: border-box;
+	background-image: url("slider-background.png");
+	position: relative;
+	-webkit-appearance: none;
+}
+.dark .slider-holder {
+	background-image: url("slider-background-dark.png");
+}
+
+.slider,
+.slider-text {
+	height: 100%;
+}
+.slider {
+	left: -2px; /* to align thumb nicely with border */
+	position: relative;
+	z-index: 100;
+	background-color: transparent;
+	-webkit-appearance: none;
+}
+
+.slider-text {
+	width: 100%;
+	line-height: 46px;
+	top: 0;
+	position: absolute;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	box-sizing: border-box;
+	box-shadow: inset 3px 3px 0px #ffffff6e, inset -3px -4px 0px #00000045;
+	height: 50px;
+	width: 22px;
+	background-image: url("button-background.png");
+	cursor: pointer;
+	border: 2px solid black;
+	border-radius: 0px;
+	-webkit-appearance: none;
+}
+
+input[type=range]::-moz-range-thumb {
+	box-sizing: border-box;
+	box-shadow: inset 3px 3px 0px #ffffff6e, inset -3px -4px 0px #00000045;
+	height: 50px;
+	width: 22px;
+	background-image: url("button-background.png");
+	cursor: pointer;
+	border: 2px solid black;
+	border-radius: 0px;
+}
+
+input[type=range]::-ms-thumb {
+	box-sizing: border-box;
+	box-shadow: inset 3px 3px 0px #ffffff6e, inset -3px -4px 0px #00000045;
+	height: 50px;
+	width: 22px;
+	background-image: url("button-background.png");
+	cursor: pointer;
+	border: 2px solid black;
+	border-radius: 0px;
+}
+
+input[type=range]::-moz-range-track {
+	visibility: hidden;
+}
+
+input[type=range]::-webkit-slider-thumb:hover,
+input[type=range]::-webkit-slider-thumb:active {
+	background-image: url("button-background-blue.png");
+}
+input[type=range]::-moz-range-thumb:hover,
+input[type=range]::-moz-range-thumb:active {
+	background-image: url("button-background-blue.png");
+}
+input[type=range]::-ms-thumb:hover,
+input[type=range]::-ms-thumb:active {
+	background-image: url("button-background-blue.png");
+}
+
+/** Individual controls' sizes **/
+.new-seed-button {
+	width: 332px;
+}
+
+.difficulty-slider-holder,
+.difficulty-slider-holder .slider {
+	width: 200px;
+}
+
+#options-toggle-button {
+	width: 150px;
+}
+
+/* End UI controls */
+
+/* Streamer Mode */
+
+.stream-exit-text {
+	color: #505050;
+	text-align: center;
+	display: none;
+}
+
+.streamer-mode #nav_section,
+.streamer-mode .buttons-row,
+.streamer-mode #rules-section {
+	display: none;
+}
+
+.streamer-mode .stream-exit-text {
+	display: block;
+}
+
+body.streamer-mode {
+	background-image: none;
+}
+/* End Streamer Mode */
+
+/* Rules And Bottom */
+
+#rules-section {
+	margin-top: 10px;
+	background-color: var(--bg-colour);
+	padding: 10px 0px 10px 0px;
+	border-top: 5px solid;
+	font-size:0.75em;
+	text-align: center;
+}
+
+#rules-section p,
+#rules-section h2,
+#rules-section h3,
+#rules-section ul,
+#rules-section ul li {
+	max-width: 800px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	color: var(--fg-colour);
+}
+#rules-section h2,
+#rules-section h3 {
+	text-align: center;
+}
+
+#rules-section ul {
+	padding-left: 60px;
+}
+#rules-section ul li {
+	list-style-type: circle;
+}
+
+#rules-section a {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* End Rules And Bottom */
+
+/* Pause menu */
+.pause-menu {
+	/* cover the whole bingo sheet */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* dim the bingo sheet */
+	background: rgba(0,0,0,0.4);
+	z-index: 50;
+
+	gap: 1.5em;
+	flex-direction: row;
+	justify-content: center;
+	display: none;
+}
+
+.pause-menu-column {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	margin-top: 5em;
+}
+
+.show-options #bingo {
+	filter: blur(0.1em);
+}
+.hidden.show-options #hidden-bingo {
+	filter: blur(0.5em);
+}
+
+.pause-menu-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3em;
+}
+
+#options-menu .options-button,
+#options-menu .slider-holder,
+#options-menu .slider {
+	width: 16rem;
+}
+
+.version-button {
+	width: 300px;
+}
+
+.pause-menu-close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	height: 2rem;
+	width: 2rem;
+	font-size: 1rem;
+	padding-bottom: 1rem;
+}
+
+.show-options #options-menu {
+	display: flex;
+}
+
+/* End Pause Menu */
+
+#nav_section,
+#bingo-section,
+#rules-section {
+	border-color: #000;
+}
+
+select, input[type="text"] {
+	color: var(--fg-colour);
+	background: var(--bg-colour);
+	border-color: gray;
+}
+
+.dark .tooltipQ,
+.dark .symbol {
+	filter: invert();
+}
+
+.dark #hidden-bingo {
+	background-image: url(polished_blackstone_bricks.png);
+	background-size: 128px 128px;
+}
+
+.dark .button {
+	background-image: url("button-background-dark.png");
+}
+.dark .button,
+.dark .slider-text {
+	text-shadow: 0.125em 0.125em #303030;
+	color: var(--fg-colour);
+}
+.button:hover,
+.slider-holder:hover .slider-text {
+	color: #FFF787;
+}
+.button:hover {
+	background-image: url("button-background-blue.png");
+}
+
+.dark a {
+	color: rgb(60, 164, 255);
+}
+.dark a:hover {
+	color: rgb(55, 138, 211);
+}
+.dark a:active {
+	color: rgb(238, 0, 0);
+}
+.dark a:visited {
+	color: rgb(162, 32, 162);
+}
+
+/* for smooth transition between colour themes */
+.smooth-transition * {
+	transition-property: background-color, color, border, filter;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-in;
+}
+/* End Dark Mode */
+
+/* Export Popup */
+
+#export {
+	width: 50%;
+	height: 50%;
+	position: fixed;
+	border: 4px solid #000;
+	top: 10%;
+	left: 25%;
+	color: var(--fg-colour);
+	background: var(--bg-colour);
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	text-align: center;
+	padding: 4px;
+}
+
+#export textarea {
+	flex-grow: 1;
+	font-family: monospace;
+	color: var(--fg-colour);
+	background-color: var(--bg-colour);
+}
+
+/* End Export Popup */
+
+/* GitHub logo */
+.github-logo {
+	display: inline-block;
+	width: 200px;
+	height: 64px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(github-img.png);
+}
+.dark .github-logo {
+	background-image: url(github-img-white.png);
+}
