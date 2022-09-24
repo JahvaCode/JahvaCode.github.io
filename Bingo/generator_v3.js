@@ -169,7 +169,7 @@ var generator_v3 = function(layout, difficulty, bingoList)
 						tagCount[tag.name] = 0;
 					}
 					// Otherwise check if it's higher than it should be
-					else if (tagCount[tag.name] >= tag.max[difficulty - 1])
+					if (tagCount[tag.name] >= tag.max[difficulty - 1])
 					{
 						// If we've got too many of that tag, get a new goal
 						console.log(tag.name + " max reached with " + tagCount[tag.name] + " on the board");
