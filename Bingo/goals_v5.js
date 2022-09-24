@@ -117,7 +117,7 @@ var bingoList_v5 = [
 	{name: "(2-3) Clocks", tags: [Item, Overworld]},
 	{name: "(2-4) Iron Blocks", antisynergy: ["IronBlocks"], infrequency: 2, tags: [Item]},
 	{name: "Gold Block", antisynergy: ["GoldBlocks"], infrequency: 2, tags: [Item]},
-	{name: "Golden Apple", tags: [Item]},
+	{name: "Golden Apple", antisynergy: ["RareItem"], tags: [Item]},
 	{name: "(2-4) Bookshelves", tags: [Item, Overworld]},
 	{name: "Never wear Chestplates", catalyst: ["WearArmour"], antisynergy: ["NeverWearArmour"], tags: [Never]},
 	{name: "Never use Shields", tooltiptext: "You can use Shields in crafting, but cannot use them for blocking", tags: [Never]},
@@ -277,6 +277,7 @@ var bingoList_v5 = [
 	{name: "(32-64) Cobbled Deepslate", antisynergy: ["Deepslate"], tags: [Overworld, Item]},
 	{name: "(12-16) Deepslate", antisynergy: ["Deepslate"], tags: [Overworld, Item]},
 	{name: "(12-16) Chiseled Deepslate", antisynergy: ["Deepslate"], tags: [Overworld, Item]},
+	{name: "Obtain an Item with a Blue Name", antisynergy: ["RareItem", "ColouredName"], tags: [Item, Overworld]},
 ],
 
 // Medium (2)
@@ -358,7 +359,7 @@ var bingoList_v5 = [
 	{name: "Deplete an Iron Sword", reactant: ["SwordUse"], tooltiptext: "Use an Iron Sword until it breaks, check the 'Items' statistics screen!", tooltipimg: "Goal Tooltip Images/SwordDepelete.jpg", tags: [Action, Stat]},
 	{name: "Saddle", tags: [Item]},
 	{name: "Give a mob a Hat", tags: [Action, Combat]},
-	{name: "Heart of the Sea", tags: [Item, Ocean, Overworld]},
+	{name: "Heart of the Sea", antisynergy: ["UncommonItem"], tags: [Item, Ocean, Overworld]},
 	//{name: "Phantom Membrane", reactant: ["Pacifist"], tags: [Item, Combat, Overworld]},
 	{name: "Add a Marker to a Map", tags: [Action, Overworld]},
 	{name: "Water, Lava, Milk and Fish Bucket", antisynergy: ["BucketTypes", "WaterBucket", "LavaBucket", "MilkBucket", "FishBucket"], reactant: ["UseBuckets"], tooltiptext: "Can be any of the types of Fish.", tooltipimg: "Goal Tooltip Images/FishBucket.jpg", tags: [Item, Overworld]},
@@ -376,7 +377,7 @@ var bingoList_v5 = [
 	{name: "Kill (75-100) mobs", reactant: ["Pacifist"], tooltiptext: "Check the 'General' statistics screen!", antisynergy: ["MobKills"], tags: [Action, Combat, Stat]},
 	{name: "(33-64) Seagrass", antisynergy: ["Seagrass"], infrequency: 2, tags: [Item, Ocean, Overworld]},
 	{name: "Kill an Iron Golem", reactant: ["Pacifist"], tags: [Action, Overworld]},
-	{name: "Kill a mob with an End Crystal", antisynergy: ["EnderPearl"], reactant: ["Pacifist"], tags: [Action, Overworld, Nether, Combat]},
+	{name: "Kill a mob with an End Crystal", antisynergy: ["EnderPearl", "RareItem"], reactant: ["Pacifist"], tags: [Action, Overworld, Nether, Combat]},
 	{name: "Never Craft Sticks", tags: [Never, Overworld]},
 	{name: "Light a Campfire from 10 blocks away", tags: [Action]},
 	{name: "Max Scale Map", tooltiptext: "You don't need to complete it, just zoom it out with a Cartography Table.", tags: [Item, Overworld]},
@@ -415,7 +416,7 @@ var bingoList_v5 = [
 	{name: "Kill a mob that is wearing Full Iron Armour", reactant: ["Pacifist"], tags: [Action, Combat]},	
 	{name: "Ice Block on top of a Magma Block", antisynergy: ["SilkTouch"], tags: [Item, Build, Overworld]},	
 	{name: "Destroy a Monster Spawner", tags: [Action, Combat]},	
-	{name: "Listen to a Music Disc", tags: [Item]},
+	{name: "Listen to a Music Disc", antisynergy: ["RareItem"], tags: [Item]},
 	{name: "(16-32) Mossy Cobblestone", tags: [Item, Overworld]},
 	{name: "Melt a Snow Golem in a Hot Biome", antisynergy: ["Snow"], tags: [Action, RareBiome, Overworld]},
 	{name: "Remove a Snow Golem's Helmet", antisynergy: ["Snow"], tags: [Action, RareBiome, Overworld]},	
@@ -443,6 +444,8 @@ var bingoList_v5 = [
 	{name: "Make the text on a Sign glow", antisynergy: ["Glow"], tags: [Action, Overworld]},
 	{name: "Turtle Egg", antisynergy: ["Turtles", "SilkTouch"], tags: [Ocean, Overworld]},
 	{name: "Mine a Deepslate Coal Ore", tooltiptext: "You don't need to obtain the item", antisynergy: [], tags: []},
+	{name: "Obtain an Item with a Yellow Name", antisynergy: ["UncommonItem", "ColouredName"], tags: [Item, Overworld]},
+	{name: "(5-8) Glistering Melon Slice", antisynergy: [], tags: [Item, Overworld]},
 	
 ],
 
@@ -453,7 +456,6 @@ var bingoList_v5 = [
 	{name: "Shear a Mooshroom", antisynergy: ["Mooshroom"], infrequency: 2, tags: [Action, RareBiome, Overworld]},
 	{name: "(2-5) Sea Lanterns", tags: [Item, Ocean, Overworld]},
 	{name: "Sponge", tooltiptext: "DRY Sponge, not a Wet one", tooltipimg: "Goal Tooltip Images/Sponge.jpg", tags: [Item, Ocean, Overworld]},
-	{name: "(11-14) Different Flowers", antisynergy: ["Flowers"], infrequency: 3, tags: [Item, RareBiome, Overworld]},
 	{name: "(2-4) Diamond Blocks", antisynergy: ["DiamondBlock"], infrequency: 2, tags: [Item]},
 	{name: "Get a Zombified Piglin's Sword", reactant: ["Pacifist"], tooltiptext: "Kill Zombified Piglins until you get a rare drop from one, it being their Golden Sword.", tooltipimg: "Goal Tooltip Images/GoldenSword.jpg", tags: [Action, Combat, Nether]},
 	{name: "Finish by launching Fireworks of (5-10) Different Colours", tags: [Action, Item, Colour, Overworld, Finish]},
@@ -487,11 +489,11 @@ var bingoList_v5 = [
 	{name: "(5-7) Different Diamond Items", antisynergy: ["DiamondItems"], tooltiptext: "Any item with 'Diamond' in its name (yes, even itself).", tags: [Item]},
 	{name: "(32-64) Popped Chorus Fruit", tags: [Item, End]},
 	{name: "Get a Villager into The End", tags: [Action, End, Village]},
-	{name: "(5-16) Dragon's Breath", tags: [Item, Combat, End]},
+	{name: "(5-16) Dragon's Breath", antisynergy: ["UncommonItem"], tags: [Item, Combat, End]},
 	{name: "Dragon Egg", tags: [Item, Combat, End]},
 	{name: "Complete a full size Map", antisynergy: ["CompleteMap"], tags: [Action, Overworld]},
 	{name: "Be killed by a Villager", tooltiptext: "Sometimes you need to DISPENSE some DEFENCE.", tags: [Village, Overworld, Stat, Combat]},
-	{name: "Save yourself with a Totem of Undying", tags: [Item, Overworld]},
+	{name: "Save yourself with a Totem of Undying", antisynergy: ["UncommonItem"], tags: [Item, Overworld]},
 	{name: "Every type of Sword", infrequency: 2, antisynergy: ["EverySword"], tooltiptext: "Wooden, Gold, Iron, Diamond and yes, even Netherite.", tags: [Item, Nether]},
 	{name: "Every type of Pickaxe", infrequency: 2, antisynergy: ["EveryPickaxe"], tooltiptext: "Wooden, Gold, Iron, Diamond and yes, even Netherite.", tags: [Item, Nether]},
 	{name: "Pacifist", tooltiptext: "Never kill any creature, as per the statistics screen", catalyst: ["Pacifist"], tags: [Never, Stat]},
@@ -515,7 +517,7 @@ var bingoList_v5 = [
 	{name: "(6-15) Honeycomb Blocks", antisynergy: ["Honeycomb"], infrequency: 2, tags: [Action, Overworld]},
 	{name: "Kill a Wandering Trader", reactant: ["Pacifist"], tags: [Action, Overworld, Combat]},
 	{name: "Cure a Zombie Villager", tags: [Action, Overworld]},
-	{name: "Throw a Mending Book into Lava", tags: [Action]},
+	{name: "Throw a Mending Book into Lava", antisynergy: ["UncommonItem"], tags: [Action]},
 	{name: "Never smelt with Furnaces", tooltiptext: "You can use Furnaces in crafting, but cannot use them for cooking or smelting", catalyst: ["UseFurnace"], tags: [Never]},
 	{name: "Grow a Huge Nether Fungus in the Overworld", antisynergy: ["GrowFungus"], tags: [Action, Overworld, Nether]},
 	{name: "(32-64) Dirt, Netherrack and End Stone", tags: [Item, Overworld, Nether, End]},
@@ -531,6 +533,8 @@ var bingoList_v5 = [
 	{name: "Convert a Skeleton into a Stray using Powder Snow", antisynergy: ["PowderSnow"], tags: [Action, Overworld, RareBiome]},
 	{name: "Summit a natural Mountain that reaches higher than Y=200", antisynergy: [], tags: [Action, RareBiome, Overworld]},
 	{name: "Goat Horn", antisynergy: [], tags: [RareBiome, Overworld, Item]},
+	{name: "Grow a Tadpole into a Green Frog", antisynergy: ["Frog"], tags: [Action, Overworld]},
+	{name: "Any Froglight", antisynergy: ["Frog"], tags: [Nether, Item]},
 
 ],
 
@@ -579,4 +583,8 @@ var bingoList_v5 = [
 ];
 
 
-//{name: "", antisynergy: [], tags: []},
+
+
+
+{name: "", antisynergy: [], tags: []},
+{name: "", antisynergy: [], tags: []},
