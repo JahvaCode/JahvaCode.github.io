@@ -437,7 +437,7 @@ var bingoList_v5 = [
 	{name: "(16-32) Pointed Dripstone", antisynergy: ["Dripstone"], tags: [Overworld, Item]},
 	{name: "Kill a Mob by Dropping Pointed Dripstone on it", antisynergy: ["Dripstone", "KillFallingBlock"], tags: [Action, Combat]},
 	{name: "Wax a Copper Block", antisynergy: ["Copper", "Honey"], tags: [Item, Overworld]},
-	{name: "Remove a layer of Oxidisation from a Copper Block", antisynergy: ["Copper"], tags: [Action, Overworldl]},
+	{name: "Remove a layer of Oxidisation from a Copper Block", antisynergy: ["Copper"], tags: [Action, Overworld]},
 	{name: "Add a Candle to a Cake", antisynergy: ["Honey", "Cake"], tags: [Action, Overworld]},
 	{name: "Glow Item Frame", antisynergy: ["Glow"], tags: [Item, Overworld]},
 	{name: "Make the text on a Sign glow", antisynergy: ["Glow"], tags: [Action, Overworld]},
