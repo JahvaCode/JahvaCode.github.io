@@ -340,7 +340,7 @@ var bingoList_v5 = [
 	{name: "Wear 4 Different Armour types at the same time",  tooltiptext: "Example: GOLD shoes, LEATHER Trousers, IRON Chestplate and DIAMOND Helmet.", tooltipimg: "Goal Tooltip Images/4Armour.jpg", reactant: ["WearArmour"], tags: [Action]},
 	{name: "Fill a Hopper with 320 items", tags: [Action, Item]},
 	{name: "(16-32) Red Nether Brick Blocks", reactant: ["UseFurnace"], tags: [Item, Nether]},
-	{name: "(16-32) Spectral Arrows", anitsynergy: [SpectralArrows], tags: [Item, Nether]},
+	{name: "(16-32) Spectral Arrows", anitsynergy: ["SpectralArrows"], tags: [Item, Nether]},
 	{name: "(33-64) Rotten Flesh", antisynergy: ["RotFlesh"], infrequency: 2, tags: [Item]},
 	{name: "(16-32) Ink Sacs", antisynergy: ["InkSacs"], infrequency: 2, tags: [Item, Overworld]},
 	{name: "(5-9) Slimeballs", antisynergy: ["Slime"], tags: [Item, RareBiome, Overworld]},
