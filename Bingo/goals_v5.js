@@ -446,6 +446,7 @@ var bingoList_v5 = [
 	{name: "Mine a Deepslate Coal Ore", tooltiptext: "You don't need to obtain the item", antisynergy: [], tags: []},
 	{name: "Obtain an Item with a Yellow Name", antisynergy: ["UncommonItem", "ColouredName"], tags: [Item, Overworld]},
 	{name: "(5-8) Glistering Melon Slice", antisynergy: [], tags: [Item, Overworld]},
+	{name: "(12-16) Gilded Blackstone", antisynergy: [], tags: [Nether, Item]},
 	
 ],
 
@@ -534,7 +535,8 @@ var bingoList_v5 = [
 	{name: "Summit a natural Mountain that reaches higher than Y=200", antisynergy: [], tags: [Action, RareBiome, Overworld]},
 	{name: "Goat Horn", antisynergy: [], tags: [RareBiome, Overworld, Item]},
 	{name: "Grow a Tadpole into a Green Frog", antisynergy: ["Frog"], tags: [Action, Overworld]},
-	{name: "Any Froglight", antisynergy: ["Frog"], tags: [Nether, Item]},
+	{name: "Any Froglight", antisynergy: ["Frog"], tags: [Nether, Item]},	
+	{name: "Pigstep", antisynergy: [], tags: [Nether, Item]},
 
 ],
 
