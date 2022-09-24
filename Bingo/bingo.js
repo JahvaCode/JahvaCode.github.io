@@ -46,7 +46,7 @@ var VERSIONS = [
 ];
 
 // This is the newest stable version that users not specifying a version will get
-var LATEST_VERSION = "4";
+var LATEST_VERSION = "adam";
 
 const SQUARE_COUNT = 25;
 const NODE_TYPE_TEXT = 3;
