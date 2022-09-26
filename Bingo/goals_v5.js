@@ -583,10 +583,3 @@ var bingoList_v5 = [
 
 
 ];
-
-
-
-
-
-{name: "", antisynergy: [], tags: []},
-{name: "", antisynergy: [], tags: []},
