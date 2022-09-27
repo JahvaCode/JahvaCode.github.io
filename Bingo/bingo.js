@@ -14,6 +14,7 @@ var COLOUR_SELECTIONS = [
 	[DEFAULT_SQUARE_CLASS_NAME, "bluesquare", "greensquare", "redsquare"],
 	ALL_COLOURS
 ];
+const COLOUR_NAMES = {"bluesquare": "Blue", "greensquare": "Green", "redsquare": "Red", "yellowsquare": "Yellow", "cyansquare": "Cyan", "brownsquare": "Brown"}
 var COLOURCOUNT = 1; // used as an index in COLOUR_SELECTIONS and COLOURCOUNTTEXT
 var COLOURCOUNTTEXT = [ "Green only", "Blue, Green, Red", "6 Colours"];
 var COLOURSYMBOLS = false;
@@ -500,6 +501,19 @@ function updateColourCount()
 {
 	$(".colourCount-text").text(COLOURCOUNTTEXT[COLOURCOUNT]);
 	$("#colourCountRange").val(COLOURCOUNT);
+	if (COLOURCOUNT === 0)
+		$("#colourSelect").show();
+	else
+		$("#colourSelect").hide();
+
+}
+
+function cycleColour() {
+	var i = (ALL_COLOURS.indexOf(COLOUR_SELECTIONS[COLOURCOUNT][1]) + 1) % ALL_COLOURS.length;
+	i = i || 1; // set to 1 if 0
+	COLOUR_SELECTIONS[COLOURCOUNT][1] = ALL_COLOURS[i];
+	COLOURCOUNTTEXT[0] = COLOUR_NAMES[ALL_COLOURS[i]] + " only";
+	$(".colourCount-text").text(COLOURCOUNTTEXT[COLOURCOUNT]);
 }
 
 function changeColourCount(value)
