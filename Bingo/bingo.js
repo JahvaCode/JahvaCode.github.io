@@ -348,6 +348,7 @@ function forEachSquare(f)
 
 function generateNewSheet()
 {
+	resetConnection();
 	$(".seed_for_copying").val(SEED);
 	$(".seed_for_copying").attr("size", SEED.length);
 
@@ -638,6 +639,7 @@ function setSquareColor(square, colorClass)
 {
 	square.removeClass(ALL_COLOURS);
 	square.addClass(colorClass);
+	updateConnectionSquare(square, colorClass);
 }
 
 function copySeedToClipboard(id, event)

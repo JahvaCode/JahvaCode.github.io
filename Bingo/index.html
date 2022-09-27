@@ -7,6 +7,8 @@
 		<link rel="stylesheet" href="bingo.css" type="text/css" />
 
 		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+		
+		<script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
 
 		<script src="generator_v1.js"></script>
 		<script src="generator_v2.js"></script>
@@ -17,6 +19,7 @@
 		<script src="goals_v4.js"></script>
 		<script src="goals_v5.js"></script>
 		<script src="bingo.js"></script>
+		<script src="online.js"></script>
 
 		<link rel="icon" type="image/png" href="icon.png" />
 
@@ -115,6 +118,7 @@
 								<p class="slider-text colourCount-text"></p>
 							</div>
 							<button class="button options-button" id="colourSymbols" onclick='toggleColourSymbols();' title="Toggle the symbols showing on the squares for different colours."></button>
+							<button class="button options-button" id="connection" onclick='initConnection();' title="Open P2P connection.">Open Connection</button>
 						</div>
 					</div>
 					<div class="pause-menu-column">
