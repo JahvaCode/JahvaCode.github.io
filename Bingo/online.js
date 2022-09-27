@@ -64,6 +64,15 @@ function initConnection() {
 		c.on('close', function() {
 			conns = conns.filter(item => item !== c);
 		});
+
+        c.on('open', function() {
+            for (var i = 1; i <= 25; ++i)
+            {
+                console.log("sending board to new connection");
+                c.send(JSON.stringify({"id": "slot" + i, "colour": $("#slot" + i).attr("class")}));
+            }
+        });
+
 		conns.push(c);
     });
 }
@@ -92,8 +101,6 @@ function updateConnectionSquare(square, colourClass) {
         else
             conns[0].send(JSON.stringify(data));
     }
-    else
-        console.log("PEER NULL");
 }
 
 function resetConnection() {

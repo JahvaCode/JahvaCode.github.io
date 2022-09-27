@@ -500,6 +500,10 @@ body {
 	-webkit-appearance: none;
 }
 
+.slider:disabled {
+	opacity: 0.2;
+}
+
 .slider-text {
 	width: 100%;
 	line-height: 46px;

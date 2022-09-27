@@ -117,8 +117,12 @@
 								<input type="range" id="colourCountRange" value="1" max="2" min="0" class="slider" oninput="changeColourCount(this.value);"/>
 								<p class="slider-text colourCount-text"></p>
 							</div>
+							<button class="button options-button" id="colourSelect" onclick="cycleColour();" title="Cycle through which colour is being used.">Cycle Colour</button>
 							<button class="button options-button" id="colourSymbols" onclick='toggleColourSymbols();' title="Toggle the symbols showing on the squares for different colours."></button>
+						</div>
+						<div class="pause-menu-group">
 							<button class="button options-button" id="connection" onclick='initConnection();' title="Open P2P connection.">Open Connection</button>
+							<button class="button options-button" id="lockMode" onclick='toggleLockMode();' title="Prevents a colour other than yours from being changed.">Enable Lock Mode</button>
 						</div>
 					</div>
 					<div class="pause-menu-column">
