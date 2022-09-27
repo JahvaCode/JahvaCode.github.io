@@ -20,6 +20,7 @@ var COLOURCOUNTTEXT = [ "Green only", "Blue, Green, Red", "6 Colours"];
 var COLOURSYMBOLS = false;
 var DARK_MODE = false;
 const NEVER_HIGHLIGHT_CLASS_NAME = "greensquare";
+var LOCK_MODE = false;
 
 var hoveredSquare;
 
@@ -101,12 +102,14 @@ $(document).ready(function()
 	bingoSquares.click(function()
 	{
 		const square = $(this);
-		setSquareColor(square, nextColour(square));
+		if (!LOCK_MODE || COLOUR_SELECTIONS[COLOURCOUNT].filter(x => square.hasClass(x)).length > 0)
+			setSquareColor(square, nextColour(square));
 	});
 	bingoSquares.contextmenu(function()
 	{
 		const square = $(this);
-		setSquareColor(square, prevColour(square));
+		if (!LOCK_MODE || COLOUR_SELECTIONS[COLOURCOUNT].filter(x => square.hasClass(x)).length > 0)
+			setSquareColor(square, prevColour(square));
 		return false;
 	});
 
@@ -569,6 +572,20 @@ function toggleDarkMode()
 	DARK_MODE = !DARK_MODE;
 	updateDarkMode();
 	pushNewLocalSetting(COLOUR_THEME_SETTING_NAME, DARK_MODE ? DARK_MODE_CLASS_NAME : "light");
+}
+
+function toggleLockMode() {
+	if (LOCK_MODE = !LOCK_MODE) // Toggles. If it is now in lock mode
+	{
+		changeColourCount(0);
+		$("#lockMode").html("Disable Lock Mode");
+		$("#colourCountRange").prop('disabled', true);
+	}
+	else
+	{
+		$("#lockMode").html("Enable Lock Mode");
+		$("#colourCountRange").prop('disabled', false);
+	}
 }
 
 function pushNewUrl()

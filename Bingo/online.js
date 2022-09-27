@@ -92,8 +92,6 @@ function updateConnectionSquare(square, colourClass) {
         else
             conns[0].send(JSON.stringify(data));
     }
-    else
-        console.log("PEER NULL");
 }
 
 function resetConnection() {
