@@ -466,7 +466,6 @@ var bingoList_v5 = [
 	{name: "Kill a Silverfish", antisynergy: [], tags: [Action]},
 	{name: "Copper Bulb", antisynergy: [], tags: [Item]},
 	{name: "Summon a Silverfish by dying", antisynergy: [], tags: [Action, Nether]},
-	{name: "Summon a Cobweb by dying", antisynergy: [], tags: [Action, Nether]},
 ],
 // Hard (3)
 [
@@ -566,6 +565,7 @@ var bingoList_v5 = [
 	{name: "Rainbow", tooltiptext: "Wear Armour made of four different materials, each with a different Smithing Template applied, with a unique resource used to colour each", antisynergy: [], tags: [Overworld, Item]},
 	{name: "Ride a Minecart through all 3 Dimensions without dismounting", antisynergy: [], tags: ["Action", "Nether", "End"]},
 	{name: "Summon a Slime by dying", antisynergy: ["Slime"], tags: [Action, RareBiome, Nether]},
+	{name: "Summon a Cobweb by dying", antisynergy: [], tags: [Action, Nether]},
 ],
 // Very Hard (4)
 [
