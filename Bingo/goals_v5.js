@@ -597,7 +597,7 @@ var bingoList_v5 = [
 	{name: "Use a Totem of Undying to remove a Negative Status Effect", antisynergy: ["Pillager"], tags: [Action, RareBiome]},
 	{name: "Kill a Warden", antisynergy: [], tags: [Combat, Overworld]},
 	{name: "Recieve a Potion Effect from a Charged Creeper", antisynergy: ["Lightning"], tags: [Action, Nether]},
-	{name: "Remove some Oxidisation from a Copper Block using Lightning", antisynergy: ["Lightning"], tags: [Action2 Overworld]},
+	{name: "Remove some Oxidisation from a Copper Block using Lightning", antisynergy: ["Lightning"], tags: [Action, Overworld]},
 	{name: "Hatch 4 Chickens from the same Egg", antisynergy: [], tags: [Action, Overworld]},
 	{name: "Duplicate an Allay", antisynergy: [], tags: [Action, Overworld]},
 	{name: "All Armour Trims", antisynergy: [], tags: [Item, Overworld, Nether, End]},
