@@ -348,7 +348,7 @@ var bingoList_v5 = [
 	{name: "Ghast Tear", reactant: ["Pacifist"], tags: [Item, Nether, Combat]},
 	{name: "(32-64) Glowstone Dust", tags: [Item, Nether]},
 	{name: "(10-32) Item Frames", tags: [Item]},
-	{name: "(3-4) Different Diamond Items", antisynergy: ["DiamondItems"], tooltiptext: "Any item with 'Diamond' in its nam, even itself", tags: [Item]},
+	{name: "(3-4) Different Diamond Items", antisynergy: ["DiamondItems"], tooltiptext: "Any item with 'Diamond' in its name, even itself", tags: [Item]},
 	{name: "(2-4) Prismarine Crystals", infrequency: 2, tags: [Item, Ocean, Overworld]},
 	{name: "Expose a block of Bedrock to the sky", tags: [Action, Overworld]},
 	{name: "Deplete an Iron Sword", reactant: ["SwordUse"], tags: [Action, Stat]},
