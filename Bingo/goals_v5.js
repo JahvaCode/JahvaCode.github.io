@@ -240,7 +240,7 @@ var bingoList_v5 = [
 	{name: "(2-6) Blackstone", tags: [Item, Nether]},
 	{name: "Fill all 4 slots of a Soul Campfire with Porkchops", antisynergy: ["SoulSandValley"], reactant: ["Pacifist"], tags: [Action, Nether, Combat]},
 	{name: "Soul Lantern", antisynergy: ["SoulSandValley"], tags: [Item, Nether]},
-	{name: "Open a Door with a Target Block from 10 blocks away"  tags: [Action, Overworld]},
+	{name: "Open a Door with a Target Block from 10 blocks away", tags: [Action, Overworld]},
 	{name: "Carrot on a Stick", tags: [Item, Overworld]},
 	{name: "Barter with a Piglin", tags: [Action, Nether]},
 	{name: "Become Nauseous", reactant: ["EatMeat"], tags: [Item, Ocean, Overworld]},
