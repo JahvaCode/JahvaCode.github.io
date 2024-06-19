@@ -98,12 +98,9 @@ var bingoList_v5 = [
 	{name: "Hang up a Painting", antisynergy: ["Painting"], tags: [Action, Overworld]},
 	{name: "Fill a Composter", tags: [Action]},	
 	{name: "(8-12) Flint", tags: [Item]},
-	{name: "Decorated Pot", tooltiptext: "(Doesn't have to have decorations).", antisynergy: ["Pot"], tags: []},
-	{name: "Hang a sign from a fence", antisynergy: [], tags: []},
-	{name: "Break a Suspicious Sand or Gravel Block", antisynergy: ["Sus"], tags: []},
-	{name: "", antisynergy: [], tags: []},
-	{name: "", antisynergy: [], tags: []},
-	{name: "", antisynergy: [], tags: []},
+	{name: "Decorated Pot", tooltiptext: "(Doesn't have to have decorations).", antisynergy: ["Pot"], tags: [Item, Overworld]},
+	{name: "Hang a sign from a fence", antisynergy: [], tags: [Item, Overworld]},
+	{name: "Break a Suspicious Sand or Gravel Block", antisynergy: ["Sus"], tags: [Action, Overworld]},
 ],
 // Easy (1)
 [
